@@ -1,0 +1,9 @@
+[submodule "pcb/libs/random-keyboard-parts.pretty"]
+	path = pcb/libs/random-keyboard-parts.pretty
+	url = https://github.com/ai03-2725/random-keyboard-parts.pretty.git
+[submodule "pcb/libs/keyswitches.pretty"]
+	path = pcb/libs/keyswitches.pretty
+	url = https://github.com/daprice/keyswitches.pretty.git
+[submodule "pcb/libs/CrumpPrints.pretty"]
+	path = pcb/libs/CrumpPrints.pretty
+	url = https://github.com/tylercrumpton/CrumpPrints.pretty.git

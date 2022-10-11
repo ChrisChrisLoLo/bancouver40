@@ -1,0 +1,16 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"SW25,SW17,SW23,SW26,SW13,SW20,SW16,SW4,SW1,SW29,SW15,SW34,SW6,SW10,SW33,SW27,SW30,SW7,SW19,SW40,SW24,SW32,SW5,SW31,SW38,SW35,SW18,SW3,SW9,SW14,SW21,SW2,SW12,SW36,SW22,SW28,SW37,SW11,SW39,SW8";"Kailh_socket_PG1350";40;"SW_Push";;;
+2;"H4,H5,H2,H6,H3,H1";"MountingHole_2.2mm_M2_ISO7380";6;"MountingHole";;;
+3;"D35,D31,D30,D34,D11,D8,D22,D24,D27,D4,D40,D29,D28,D33,D15,D9,D21,D32,D19,D10,D14,D6,D18,D16,D13,D25,D26,D1,D3,D7,D23,D17,D12,D5,D37,D36,D39,D20,D38,D2";"D_SOD-323";40;"D_Small";;;
+4;"C5,C4,C6";"C_0402_1005Metric";3;"0.1uF";;;
+5;"R4,R5";"R_0402_1005Metric";2;"22";;;
+6;"U1";"QFN-44-1EP_7x7mm_P0.5mm_EP5.2x5.2mm";1;"ATmega32U4-M";;;
+7;"C2,C1";"C_0402_1005Metric";2;"22pF";;;
+8;"Y1";"Crystal_SMD_3225-4Pin_3.2x2.5mm";1;"16MHz";;;
+9;"C7";"C_0402_1005Metric";1;"10uF";;;
+10;"R6,R1";"R_0402_1005Metric";2;"10k";;;
+11;"B1";"SW_SPST_SKQG_WithoutStem";1;"SW_Push";;;
+12;"R3,R2";"R_0402_1005Metric";2;"5k1";;;
+13;"J1";"USB_C_Receptacle_XKB_U262-16XN-4BVC11";1;"USB_C_Receptacle_USB2.0";;;
+14;"F1";"Fuse_1206_3216Metric";1;"500mA";;;
+15;"C3";"C_0402_1005Metric";1;"1uF";;;
