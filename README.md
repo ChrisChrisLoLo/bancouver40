@@ -7,7 +7,7 @@ A 4x10 CFX spaced low-profile mechanical keyboard.
 Uncompromisingly small. Unabashedly uwu.
 
 ## Note
-This keyboard works exlusively with CFX keycaps due to its tight spacing.
+This keyboard works exclusively with CFX keycaps due to its tight spacing.
 
 ## Status
 v0.0 PCBS confirmed to be working and should be good to be produced.
@@ -51,6 +51,7 @@ Additionally, you should need
 <image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012230895-01.jpeg"/>
 
 ## Assembly
+- All PCB components are SMD, and many of them are fairly small; PCBA services like PCBWay is highly recommended. BOM and centroid files in source files 
 - Fairly straightforward with an assembled PCB; screw the PCB to the case using the M2 Screws. Add bumpons to case.
         
 ## Acknoledgements
