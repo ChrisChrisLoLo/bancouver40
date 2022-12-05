@@ -2,6 +2,8 @@
 
 A 4x10 CFX spaced low-profile mechanical keyboard.
 
+<image src="https://raw.githubusercontent.com/ChrisChrisLoLo/bancouver40/main/images/PXL_20221205_015210392-01.jpeg"/>
+
 Uncompromisingly small. Unabashedly uwu.
 
 ## Note
@@ -14,6 +16,8 @@ v0.0 PCBS confirmed to be working and should be good to be produced.
 This keyboard is a 4x10 ortholinear keyboard with one of the smallest possible footprints. By using Chosfox's 16.5x16.5mm CFX keycap, this keyboard is more compact than a typical choc spaced keyboard. Combined with the integrated ATMega32U4 makes this one of the smallest mechanical keyboards possible. Uses kailh choc hotswap sockets.
 
 This keyboard also has the design files needed to order your own accompanying 3D-printed/Aluminum CNC case!
+
+
 
 ## Case 
 All of the case files you need can be found in the `case` directory.
