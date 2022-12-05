@@ -17,7 +17,7 @@ This keyboard is a 4x10 ortholinear keyboard with one of the smallest possible f
 
 This keyboard also has the design files needed to order your own accompanying 3D-printed/Aluminum CNC case!
 
-
+<image src="https://raw.githubusercontent.com/ChrisChrisLoLo/bancouver40/main/images/PXL_20221205_012951007-01.jpeg"/>
 
 ## Case 
 All of the case files you need can be found in the `case` directory.
