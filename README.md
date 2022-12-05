@@ -2,7 +2,7 @@
 
 A 4x10 CFX spaced low-profile mechanical keyboard.
 
-<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_015210392-01.jpeg"/>
+<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_015210392-01.jpeg" width="700"/>
 
 Uncompromisingly small. Unabashedly uwu.
 
@@ -17,7 +17,7 @@ This keyboard is a 4x10 ortholinear keyboard with one of the smallest possible f
 
 This keyboard also has the design files needed to order your own accompanying 3D-printed/Aluminum CNC case!
 
-<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012951007-01.jpeg"/>
+<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012951007-01.jpeg" width="500"/>
 
 ## Case 
 All of the case files you need can be found in the `case` directory.
@@ -48,7 +48,7 @@ Additionally, you should need
 - 40 (plus spare) kailh choc switches. Avoid Red/White/Brown switches as they can be pretty rattly. Pro Red/Silver/Sunset switches are good places to start.
 - 40 (plus spare) 1u CFX keycaps
 
-<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012230895-01.jpeg"/>
+<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012230895-01.jpeg" width="500"/>
 
 ## Assembly
 - All PCB components are SMD, and many of them are fairly small; PCBA services like PCBWay is highly recommended. BOM and centroid files in source files 
