@@ -10,7 +10,7 @@ Uncompromisingly small. Unabashedly uwu.
 This keyboard works exclusively with CFX keycaps due to its tight spacing.
 
 ## Status
-v0.0 PCBS confirmed to be working and should be good to be produced.
+v0.0 PCBs confirmed to be working and should be good to be produced.
 
 ## About
 This keyboard is a 4x10 ortholinear keyboard with one of the smallest possible footprints. By using Chosfox's 16.5x16.5mm CFX keycap, this keyboard is more compact than a typical choc spaced keyboard. Combined with the integrated ATMega32U4 makes this one of the smallest mechanical keyboards possible. Uses kailh choc hotswap sockets.
