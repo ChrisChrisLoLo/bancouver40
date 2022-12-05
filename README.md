@@ -48,6 +48,8 @@ Additionally, you should need
 - 40 (plus spare) kailh choc switches. Avoid Red/White/Brown switches as they can be pretty rattly. Pro Red/Silver/Sunset switches are good places to start.
 - 40 (plus spare) 1u CFX keycaps
 
+<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012230895-01.jpeg"/>
+
 ## Assembly
 - Fairly straightforward with an assembled PCB; screw the PCB to the case using the M2 Screws. Add bumpons to case.
         
