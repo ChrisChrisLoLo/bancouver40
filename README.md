@@ -54,7 +54,7 @@ Additionally, you should need
 - All PCB components are SMD, and many of them are fairly small; PCBA services like PCBWay is highly recommended. BOM and centroid files in source files 
 - Fairly straightforward with an assembled PCB; screw the PCB to the case using the M2 Screws. Add bumpons to case.
         
-## Acknoledgements
+## Acknowledgements
 Big thank you to [PCBWay](https://www.pcbway.com/) for sponsoring this by manufacturing the red aluminum case for me! The anodization coloring is stunning, and I'm impressed by the CNC case quality as a whole. PCBWay offers very reasonable prices for even singluar one-off case manufactures, so I recommend them if you want to look into ordering an aluminum case for yourself or for cnc prototyping as a whole! Case files, as well as a detailed design drawing (required for screw tappings) can be found in the case folder.
 
 Also a big thank you to [Chosfox](https://chosfox.com/) for providing their [Chocfox CFX keycaps](https://chosfox.com/collections/low-profile-keycaps/products/chocfox-cfx-choc-keycaps) as well as choc switches and hotswap sockets! I'm really excited that there's more offerings in the choc keycap space, and I'm a big fan of their square, spherical indented shape. They're very aethetically pleasing (i.e. very small and cute) and comfortable to type on. Chosfox is also continuing to invest in this line of products (1.25u+ keycaps, legends), so I highly recommend trying them out for any choc related keyboard you may have, bancouver40 or not!
