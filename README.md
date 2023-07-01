@@ -53,7 +53,10 @@ Additionally, you should need
 ## Assembly
 - All PCB components are SMD, and many of them are fairly small; PCBA services like PCBWay is highly recommended. BOM and centroid files in source files 
 - Fairly straightforward with an assembled PCB; screw the PCB to the case using the M2 Screws. Add bumpons to case.
-        
+
+## Firmware
+You can find a pre-compiled firmware file in the firmware folder of this repository. If you wish to customize the layout yourself, you can find the source code of the firmware here: https://github.com/ChrisChrisLoLo/qmk_firmware/blob/bancouver40/keyboards/sporewoh/bancouver40/readme.md.
+
 ## Acknowledgements
 Big thank you to [PCBWay](https://www.pcbway.com/) for sponsoring this by manufacturing the red aluminum case for me! The anodization coloring is stunning, and I'm impressed by the CNC case quality as a whole. PCBWay offers very reasonable prices for even singluar one-off case manufactures, so I recommend them if you want to look into ordering an aluminum case for yourself or for cnc prototyping as a whole! Case files, as well as a detailed design drawing (required for screw tappings) can be found in the case folder.
 
