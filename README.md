@@ -6,6 +6,10 @@ A 4x10 CFX spaced low-profile mechanical keyboard.
 
 Uncompromisingly small. Unabashedly uwu.
 
+Also contains the source code for the 4x12 minipeg48 and the 4x4 kowgary16.
+
+<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20231022_023334208.jpg" width="700"/>
+
 ## Note
 This keyboard works exclusively with CFX keycaps due to its tight spacing.
 
