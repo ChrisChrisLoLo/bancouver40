@@ -83,7 +83,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "gerbers/")
+      (outputdirectory "gerbers-cam350/")
     )
   )
 
@@ -8086,7 +8086,7 @@
   (gr_text "bancouver40\nby sporewoh\nv0.0" (at 218.874897 17.708325) (layer "B.SilkS") (tstamp 50b37e23-00f1-4868-81de-a8c000bec0a1)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
-  (gr_text "please work please work please work" (at 190.72 17.37) (layer "B.SilkS") (tstamp d7531a2f-1605-4a60-939c-27db20074b15)
+  (gr_text "smol" (at 190.72 17.37) (layer "B.SilkS") (tstamp d7531a2f-1605-4a60-939c-27db20074b15)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
 
