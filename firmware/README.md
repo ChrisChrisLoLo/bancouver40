@@ -2,3 +2,6 @@
 This is the default firmware used for the bancouver40. It comes with the [TypeBeastXDPlus Home Edition layout](https://github.com/ChrisChrisLoLo/TypeBeastXDPlus) pre-installed.
 
 If you wish to customize the layout, you can find the QMK source code here: https://github.com/ChrisChrisLoLo/qmk_firmware/tree/bancouver40/keyboards/sporewoh/bancouver40
+
+# Vial
+Please use the hex files in the `vial` folder. You can find the source files of the vial configuration code here: https://github.com/ChrisChrisLoLo/vial-qmk/tree/sporewoh/keyboards/sporewoh
