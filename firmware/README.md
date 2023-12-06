@@ -8,3 +8,5 @@ Please use the hex files labelled `vial`. You can find the source files of the v
 
 # QMK Toolbox
 When using the vial images via QMK Toolbox, please press the reset button, then press `Clear EEPROM` before clicking on `Flash`. Your keyboard might otherwise not be responsive (but can still be reflashed and retried again).
+
+![image illustrating how to use QMK Toolbox](https://raw.githubusercontent.com/ChrisChrisLoLo/bancouver40/main/images/Screenshot%202023-12-05%20at%207.41.32%20PM.png)
