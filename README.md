@@ -10,8 +10,6 @@ Also contains the source code for the 4x12 minipeg48 and the 4x4 kowgary16.
 
 <image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20231022_023334208.jpg" width="700"/>
 
-For a limited time, get the minipeg48 and kowgary16 directly from Chosfox [here](https://chosfox.com/collections/newest-products/products/chosfox-x-sporewoh-minipeg48-kowgary16-keyboard-kit?variant=43623890026690)!
-
 ## Note
 This keyboard works exclusively with CFX keycaps due to its tight spacing.
 
