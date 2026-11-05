@@ -1,0 +1,138 @@
+{
+"commands": [
+{
+"command": "parameters.add",
+"params": {
+"name": "L",
+"expression": "175.2 mm"
+}
+},
+{
+"command": "parameters.add",
+"params": {
+"name": "W",
+"expression": "121.2 mm"
+}
+},
+{
+"command": "parameters.add",
+"params": {
+"name": "ext_y",
+"expression": "71.6 mm"
+}
+},
+{
+"command": "parameters.add",
+"params": {
+"name": "h_kb",
+"expression": "12.5 mm"
+}
+},
+{
+"command": "parameters.add",
+"params": {
+"name": "z_deck",
+"expression": "21.1 mm"
+}
+},
+{
+"command": "parameters.add",
+"params": {
+"name": "wall",
+"expression": "2 mm"
+}
+},
+{
+"command": "parameters.add",
+"params": {
+"name": "floor_t",
+"expression": "1 mm"
+}
+},
+{
+"command": "sketch.create",
+"params": {
+"plane": "XY",
+"name": "OuterSketch"
+}
+},
+{
+"command": "sketch.rectangle.rounded",
+"params": {
+"p0": [
+0,
+0
+],
+"p1": [
+175.2,
+121.2
+],
+"radius": 3
+}
+},
+{
+"command": "sketch.finish",
+"params": {}
+},
+{
+"command": "solid.extrude",
+"params": {
+"distance": "z_deck",
+"name": "Outer",
+"body_name": "Case"
+}
+},
+{
+"command": "sketch.create",
+"params": {
+"plane": "XY",
+"offset": "floor_t",
+"name": "PocketSketch"
+}
+},
+{
+"command": "sketch.rectangle.rounded",
+"params": {
+"p0": [
+2,
+2
+],
+"p1": [
+173.2,
+119.2
+],
+"radius": 1
+}
+},
+{
+"command": "sketch.finish",
+"params": {}
+},
+{
+"command": "solid.extrude",
+"params": {
+"distance": "z_deck",
+"operation": "cut",
+"name": "Pocket"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": "L + 2",
+"width": "ext_y + 1",
+"height": "z_deck - h_kb + 1",
+"corner": [
+-1,
+-1,
+"h_kb"
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "KeyboardWallStep"
+}
+}
+]
+}

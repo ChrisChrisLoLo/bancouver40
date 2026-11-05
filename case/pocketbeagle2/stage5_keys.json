@@ -1,0 +1,139 @@
+{
+"commands": [
+{
+"command": "solid.box",
+"params": {
+"length": 13.8,
+"width": 13.8,
+"height": 2.2,
+"corner": [
+4.195,
+4.205,
+6.1
+],
+"operation": "new",
+"body_name": "REF_Switch",
+"name": "SwBottom"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 15,
+"width": 15,
+"height": 2.8,
+"corner": [
+3.5950000000000006,
+3.6050000000000004,
+8.3
+],
+"operation": "join",
+"targets": [
+"REF_Switch"
+],
+"name": "SwTop"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 10,
+"width": 4.5,
+"height": 0.9,
+"corner": [
+6.095000000000001,
+8.855,
+11.1
+],
+"operation": "join",
+"targets": [
+"REF_Switch"
+],
+"name": "SwStem"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 16.5,
+"width": 16.5,
+"height": 3.6,
+"corner": [
+2.8450000000000006,
+2.8550000000000004,
+12.0
+],
+"operation": "new",
+"body_name": "REF_Keycap",
+"name": "Keycap"
+}
+},
+{
+"command": "solid.fillet",
+"params": {
+"edges": [
+[
+2.8450000000000006,
+2.8550000000000004,
+13.8
+],
+[
+19.345,
+2.8550000000000004,
+13.8
+],
+[
+19.345,
+19.355,
+13.8
+],
+[
+2.8450000000000006,
+19.355,
+13.8
+]
+],
+"radius": 1.5,
+"name": "KeycapCorners"
+}
+},
+{
+"command": "solid.fillet",
+"params": {
+"edges": [
+[
+11.095,
+19.355,
+15.6
+]
+],
+"radius": 1.0,
+"name": "KeycapTopEdge"
+}
+},
+{
+"command": "solid.pattern.rectangular",
+"params": {
+"bodies": [
+"REF_Switch",
+"REF_Keycap"
+],
+"dir1": [
+1,
+0,
+0
+],
+"count1": 10,
+"spacing1": 17,
+"dir2": [
+0,
+1,
+0
+],
+"count2": 4,
+"spacing2": 17,
+"name": "KeyGrid"
+}
+}
+]
+}

@@ -1,0 +1,555 @@
+{
+"commands": [
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.8,
+"height": 3.5,
+"base": [
+19.6,
+36.6,
+1
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "KbBoss1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 0.875,
+"height": 3.5,
+"base": [
+19.6,
+36.6,
+1.0
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "KbPilot1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.8,
+"height": 3.5,
+"base": [
+53.6,
+19.6,
+1
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "KbBoss2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 0.875,
+"height": 3.5,
+"base": [
+53.6,
+19.6,
+1.0
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "KbPilot2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.8,
+"height": 3.5,
+"base": [
+53.6,
+53.6,
+1
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "KbBoss3"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 0.875,
+"height": 3.5,
+"base": [
+53.6,
+53.6,
+1.0
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "KbPilot3"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.8,
+"height": 3.5,
+"base": [
+121.6,
+19.6,
+1
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "KbBoss4"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 0.875,
+"height": 3.5,
+"base": [
+121.6,
+19.6,
+1.0
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "KbPilot4"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.8,
+"height": 3.5,
+"base": [
+121.6,
+53.6,
+1
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "KbBoss5"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 0.875,
+"height": 3.5,
+"base": [
+121.6,
+53.6,
+1.0
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "KbPilot5"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.8,
+"height": 3.5,
+"base": [
+155.6,
+36.6,
+1
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "KbBoss6"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 0.875,
+"height": 3.5,
+"base": [
+155.6,
+36.6,
+1.0
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "KbPilot6"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1,
+"height": 3,
+"base": [
+62.1,
+49.6,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "ResetAccess"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.5,
+"height": 4.5,
+"base": [
+60.925,
+106.475,
+0
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "StandoffBoss1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.2,
+"height": 7,
+"base": [
+60.925,
+106.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffHole1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.1,
+"height": 2.6,
+"base": [
+60.925,
+106.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffCbore1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.5,
+"height": 4.5,
+"base": [
+60.925,
+79.475,
+0
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "StandoffBoss2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.2,
+"height": 7,
+"base": [
+60.925,
+79.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffHole2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.1,
+"height": 2.6,
+"base": [
+60.925,
+79.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffCbore2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.5,
+"height": 4.5,
+"base": [
+153.225,
+106.475,
+0
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "StandoffBoss3"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.2,
+"height": 7,
+"base": [
+153.225,
+106.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffHole3"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.1,
+"height": 2.6,
+"base": [
+153.225,
+106.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffCbore3"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.5,
+"height": 4.5,
+"base": [
+153.225,
+79.475,
+0
+],
+"operation": "join",
+"targets": [
+"Case"
+],
+"name": "StandoffBoss4"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.2,
+"height": 7,
+"base": [
+153.225,
+79.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffHole4"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.1,
+"height": 2.6,
+"base": [
+153.225,
+79.475,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "StandoffCbore4"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 4,
+"width": 14,
+"height": 10,
+"corner": [
+-1,
+85.775,
+8.0
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "PB2_USBC"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 36,
+"width": 2,
+"height": 3,
+"corner": [
+12,
+79,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "Vent1"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 36,
+"width": 2,
+"height": 3,
+"corner": [
+12,
+84,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "Vent2"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 36,
+"width": 2,
+"height": 3,
+"corner": [
+12,
+89,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "Vent3"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 36,
+"width": 2,
+"height": 3,
+"corner": [
+12,
+94,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "Vent4"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 36,
+"width": 2,
+"height": 3,
+"corner": [
+12,
+99,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "Vent5"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 36,
+"width": 2,
+"height": 3,
+"corner": [
+12,
+104,
+-1
+],
+"operation": "cut",
+"targets": [
+"Case"
+],
+"name": "Vent6"
+}
+}
+]
+}

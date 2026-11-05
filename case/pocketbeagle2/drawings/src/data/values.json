@@ -1,0 +1,391 @@
+{
+ "case max x": 175.2,
+ "case min x": -0.0,
+ "case max y": 121.2,
+ "case min y": -0.0,
+ "inner wall x left": 2.0,
+ "inner wall x right": 173.2,
+ "inner wall y front": 2.0,
+ "inner wall y back": 119.2,
+ "wall step y": 71.6,
+ "case bottom z": 0.0,
+ "floor top z": 1.0,
+ "keyboard wall top z": 12.5,
+ "display wall top z": 21.1,
+ "boss top z": 4.5,
+ "standoff c'bore ceiling z": 1.6,
+ "USB-C opening bottom z": 13.5,
+ "USB-C opening y0": 85.775,
+ "USB-C opening y1": 99.775,
+ "vent x0": 12.0,
+ "vent x1": 48.0,
+ "vent1 y0": 79.275,
+ "vent1 y1": 81.275,
+ "vent2 y0": 84.275,
+ "vent2 y1": 86.275,
+ "vent3 y0": 89.275,
+ "vent3 y1": 91.275,
+ "vent4 y0": 94.275,
+ "vent4 y1": 96.275,
+ "vent5 y0": 99.275,
+ "vent5 y1": 101.275,
+ "vent6 y0": 104.275,
+ "vent6 y1": 106.275,
+ "outer corner (front-left)": [
+  3.0,
+  3.0,
+  6.0
+ ],
+ "inner corner (front-left)": [
+  3.0,
+  3.0,
+  2.0
+ ],
+ "kb boss 1": [
+  19.6,
+  36.6,
+  3.6
+ ],
+ "kb boss 2": [
+  53.6,
+  19.6,
+  3.6
+ ],
+ "kb boss 3": [
+  53.6,
+  53.6,
+  3.6
+ ],
+ "kb boss 4": [
+  121.6,
+  19.6,
+  3.6
+ ],
+ "kb boss 5": [
+  121.6,
+  53.6,
+  3.6
+ ],
+ "kb boss 6": [
+  155.6,
+  36.6,
+  3.6
+ ],
+ "kb pilot 1": [
+  19.6,
+  36.6,
+  1.75
+ ],
+ "kb pilot 2": [
+  53.6,
+  19.6,
+  1.75
+ ],
+ "kb pilot 3": [
+  53.6,
+  53.6,
+  1.75
+ ],
+ "kb pilot 4": [
+  121.6,
+  19.6,
+  1.75
+ ],
+ "kb pilot 5": [
+  121.6,
+  53.6,
+  1.75
+ ],
+ "kb pilot 6": [
+  155.6,
+  36.6,
+  1.75
+ ],
+ "standoff boss 1": [
+  16.225,
+  114.975,
+  5.0
+ ],
+ "standoff boss 2": [
+  164.225,
+  114.975,
+  5.0
+ ],
+ "standoff boss 3": [
+  164.225,
+  76.475,
+  5.0
+ ],
+ "standoff hole 1": [
+  16.225,
+  114.975,
+  2.4
+ ],
+ "standoff hole 2": [
+  164.225,
+  114.975,
+  2.4
+ ],
+ "standoff hole 3": [
+  164.225,
+  76.475,
+  2.4
+ ],
+ "standoff cbore 1": [
+  16.225,
+  114.975,
+  4.2
+ ],
+ "standoff cbore 2": [
+  164.225,
+  114.975,
+  4.2
+ ],
+ "standoff cbore 3": [
+  164.225,
+  76.475,
+  4.2
+ ],
+ "reset hole": [
+  62.1,
+  49.6,
+  2.0
+ ],
+ "bezel min x": 0.0,
+ "bezel max x": 175.2,
+ "bezel front y": 71.6,
+ "bezel back y": 121.2,
+ "bezel plate underside z": 21.1,
+ "bezel top z": 22.6,
+ "window x0": 30.1,
+ "window x1": 141.2,
+ "window y0": 77.515,
+ "window y1": 114.885,
+ "frame outer x0": 26.7,
+ "frame outer x1": 148.5,
+ "frame outer y0": 73.915,
+ "frame outer y1": 118.485,
+ "panel pocket x0": 27.9,
+ "panel pocket x1": 147.3,
+ "panel pocket y0": 75.115,
+ "panel pocket y1": 117.285,
+ "frame bottom z": 18.6,
+ "FPC gap y0": 82.175,
+ "FPC gap y1": 106.175,
+ "skirt x0": 2.3,
+ "skirt x1": 172.9,
+ "skirt back y": 73.2,
+ "skirt bottom z": 6.8,
+ "bezel c'bore floor z": 21.6,
+ "bezel hole 1": [
+  16.225,
+  114.975,
+  2.2
+ ],
+ "bezel hole 2": [
+  164.225,
+  114.975,
+  2.2
+ ],
+ "bezel hole 3": [
+  164.225,
+  76.475,
+  2.2
+ ],
+ "bezel cbore 1": [
+  16.225,
+  114.975,
+  4.2
+ ],
+ "bezel cbore 2": [
+  164.225,
+  114.975,
+  4.2
+ ],
+ "bezel cbore 3": [
+  164.225,
+  76.475,
+  4.2
+ ],
+ "bezel back corner": [
+  3.0,
+  118.2,
+  6.0
+ ],
+ "window chamfer (horizontal, vertical)": [
+  0.8,
+  0.8
+ ],
+ "REF_LCD_Panel": [
+  [
+   28.2,
+   75.415,
+   18.6
+  ],
+  [
+   147.0,
+   116.985,
+   21.1
+  ]
+ ],
+ "REF_PCB": [
+  [
+   2.6,
+   2.6,
+   4.5
+  ],
+  [
+   172.6,
+   118.6,
+   6.1
+  ]
+ ],
+ "REF_PB2_Socket1": [
+  [
+   7.525,
+   77.575,
+   6.1
+  ],
+  [
+   53.725,
+   82.575,
+   14.6
+  ]
+ ],
+ "REF_PB2_Socket2": [
+  [
+   7.525,
+   102.975,
+   6.1
+  ],
+  [
+   53.725,
+   107.975,
+   14.6
+  ]
+ ],
+ "PB2 board (BOARD_OUTLINE)": [
+  [
+   3.183,
+   75.279,
+   14.6
+  ],
+  [
+   58.183,
+   110.279,
+   16.104
+  ]
+ ],
+ "PB2 tallest part under panel (Cut-Extrude2)": [
+  [
+   43.734,
+   83.18,
+   16.082
+  ],
+  [
+   52.734,
+   97.18,
+   17.182
+  ]
+ ],
+ "PB2 USB-C receptacle (Chamfer9)": [
+  [
+   2.335,
+   88.333,
+   15.109
+  ],
+  [
+   9.635,
+   97.273,
+   19.309
+  ]
+ ],
+ "REF_Keycap": [
+  [
+   2.845,
+   2.855,
+   12.0
+  ],
+  [
+   19.345,
+   19.355,
+   15.6
+  ]
+ ],
+ "REF_Switch": [
+  [
+   3.595,
+   3.605,
+   6.1
+  ],
+  [
+   18.595,
+   18.605,
+   12.0
+  ]
+ ],
+ "REF_Standoff1": [
+  [
+   14.225,
+   112.975,
+   6.1
+  ],
+  [
+   18.225,
+   116.975,
+   21.1
+  ]
+ ],
+ "REF_J3_FPC_Conn": [
+  [
+   134.755,
+   80.005,
+   6.1
+  ],
+  [
+   141.505,
+   108.355,
+   8.1
+  ]
+ ],
+ "REF_FPC_Fold": [
+  [
+   153.0,
+   83.925,
+   7.4
+  ],
+  [
+   153.3,
+   104.425,
+   19.6
+  ]
+ ],
+ "Case": [
+  [
+   -0.0,
+   -0.0,
+   -0.0
+  ],
+  [
+   175.2,
+   121.2,
+   21.1
+  ]
+ ],
+ "Bezel": [
+  [
+   0.0,
+   71.6,
+   6.8
+  ],
+  [
+   175.2,
+   121.2,
+   22.6
+  ]
+ ],
+ "PB2 lowest bottom-side part": [
+  11.5813999806142,
+  "\u5b9e\u4f531 (2)"
+ ]
+}

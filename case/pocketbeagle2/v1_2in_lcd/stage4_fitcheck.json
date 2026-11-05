@@ -1,0 +1,11 @@
+{"commands":[
+ {"command":"solid.box","params":{"length":170,"width":110,"height":1.6,"corner":[2.6,2.6,4.5],"operation":"new","body_name":"REF_PCB","name":"RefPCB"}},
+ {"command":"solid.box","params":{"length":55,"width":35,"height":1.6,"corner":[3.185,75.275,8.6],"operation":"new","body_name":"REF_PocketBeagle2","name":"RefPB2"}},
+ {"command":"solid.box","params":{"length":7.5,"width":9,"height":3.2,"corner":[2.585,88.275,10.2],"operation":"new","body_name":"REF_PB2_USBC","name":"RefUSBC"}},
+ {"command":"solid.box","params":{"length":58,"width":35,"height":1.6,"corner":[63.725,75.275,12.1],"operation":"new","body_name":"REF_LCD_PCB","name":"RefLcdPcb"}},
+ {"command":"solid.box","params":{"length":48,"width":35,"height":2.7,"corner":[67.2,75.275,13.7],"operation":"new","body_name":"REF_LCD_Glass","name":"RefLcdGlass"}},
+ {"command":"solid.cylinder","params":{"radius":2.0,"height":10,"base":[60.925,106.475,6.1],"operation":"new","body_name":"REF_Standoff1","name":"RefSO1"}},
+ {"command":"solid.cylinder","params":{"radius":2.0,"height":10,"base":[60.925,79.475,6.1],"operation":"new","body_name":"REF_Standoff2","name":"RefSO2"}},
+ {"command":"solid.cylinder","params":{"radius":2.0,"height":10,"base":[153.225,106.475,6.1],"operation":"new","body_name":"REF_Standoff3","name":"RefSO3"}},
+ {"command":"solid.cylinder","params":{"radius":2.0,"height":10,"base":[153.225,79.475,6.1],"operation":"new","body_name":"REF_Standoff4","name":"RefSO4"}}
+]}

@@ -1,0 +1,52 @@
+{
+"commands": [
+{
+"command": "solid.box",
+"params": {
+"length": 63.5,
+"width": 88.9,
+"height": 16,
+"center": [
+-58.0,
+112.0,
+8.0
+],
+"operation": "new",
+"body_name": "REF_Deck_Poker",
+"name": "RefDeck"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"diameter": 8,
+"height": 98,
+"base": [
+64.0,
+-34.0,
+4.0
+],
+"axis": "X",
+"operation": "new",
+"body_name": "REF_BIC_Barrel",
+"name": "RefPenBarrel"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"diameter": 8.6,
+"height": 52,
+"base": [
+12.0,
+-34.0,
+4.3
+],
+"axis": "X",
+"operation": "new",
+"body_name": "REF_BIC_Cap",
+"name": "RefPenCap"
+}
+}
+]
+}

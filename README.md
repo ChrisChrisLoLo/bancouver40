@@ -1,67 +1,68 @@
-# bancouver40
+# Zine Machine v0
 
-A 4x10 CFX spaced low-profile mechanical keyboard.
+> **🚧 Work in progress — stay tuned — not at all ready for fab :p**
+> Nothing here has been built or tested on real hardware yet. Don't order boards from these files.
 
-<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_015210392-01.jpeg" width="700"/>
+A 40% keyboard with a Linux computer inside: the [bancouver40](https://github.com/ChrisChrisLoLo/bancouver40)
+4×10 CFX low-profile keyboard, extended with a [PocketBeagle 2](https://www.beagleboard.org/boards/pocketbeagle-2)
+and a 4.58″ 320×960 bar display, in a translucent printed case.
 
-Uncompromisingly small. Unabashedly uwu.
+**Interactive 3D page:** <https://elevenarms.github.io/zinemachine0/>
 
-Also contains the source code for the 4x12 minipeg48 and the 4x4 kowgary16.
+![Zine Machine v0](site/screenshots/hero_scale.png)
 
-<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20231022_023334208.jpg" width="700"/>
+## What it is
 
-## Note
-This keyboard works exclusively with CFX keycaps due to its tight spacing.
+| | |
+|---|---|
+| Keyboard | bancouver40: 40 × Kailh Choc v1, CFX 16.5 mm caps, ATmega32U4 running QMK/Vial (unchanged) |
+| Computer | PocketBeagle 2 (TI AM6254, 512 MB) on its own 2×18 sockets; it is the USB host for the keyboard |
+| Display | 4.58″ 320×960 IPS bar panel (ST7701S), RGB565 over the AM62's VOUT0 + 3-wire SPI init, TPS61165 backlight boost |
+| Enclosure | 175.2 × 121.2 mm; 12.5 mm keyboard deck stepping up to a 22.6 mm display deck; translucent resin (or CNC, see notes) |
 
-## Status
-v0.0 PCBs confirmed to be working and should be good to be produced.
+The keyboard's own USB-C is removed: the 32U4 plugs straight into the PocketBeagle's USB1 host port, so the
+stock bancouver40 firmware works unchanged.
 
-## About
-This keyboard is a 4x10 ortholinear keyboard with one of the smallest possible footprints. By using Chosfox's 16.5x16.5mm CFX keycap, this keyboard is more compact than a typical choc spaced keyboard. Combined with the integrated ATMega32U4 makes this one of the smallest mechanical keyboards possible. Uses kailh choc hotswap sockets.
+## Repository layout
 
-This keyboard also has the design files needed to order your own accompanying 3D-printed/Aluminum CNC case!
+| Path | Contents |
+|---|---|
+| `pcb/bancouver40_pb2/` | KiCad 10 project (schematic + PCB), Gerbers/BOM/placement in `fab/`, [design notes](pcb/bancouver40_pb2/README.md) incl. pin map and the "verify before ordering" list |
+| `case/pocketbeagle2/` | SolidCraft design (`bancouver40_pb2.solidcraft`), STL/STEP print files, renders, [dimensioned drawings PDF](case/pocketbeagle2/drawings/bancouver40_pb2_drawings.pdf) |
+| `bom/` | [BOM with order links](bom/BOM.md), JLCPCB assembly BOM + CPL |
+| `site/` | the interactive three.js page |
+| `tools/pocketbeagle2/` | scripts that regenerate everything from the untouched upstream bancouver40 files |
+| `pcb/bancouver40_pb2/v1_2in_lcd/`, `case/pocketbeagle2/v1_2in_lcd/` | the earlier 2″ SPI-LCD variant |
+| everything else | the upstream bancouver40 repository, unchanged ([original README](README-bancouver40.md)) |
 
-<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012951007-01.jpeg" width="500"/>
+## Status / open items
 
-## Case 
-All of the case files you need can be found in the `case` directory.
+See the design notes for detail. Before anything is fabricated:
+- confirm the display's FPC pinout and contact side against the panel actually ordered;
+- confirm the FPC fold length with a real panel;
+- measure that PocketBeagle 2 P1.24 (VOUT) is 5 V;
+- write the device-tree overlay and ST7701S init for the display;
+- get real quotes (rough cost estimate: ~$275–300 for one unit, ~$150/unit for ten).
 
-## PCB
-You can find the PCB source files in the `pcb` folder. The BOM files can be found in this folder.
+## Credits
 
-## Directory Structure
-- `case`
-    You can find the files you need in this folder to print out a case for the keyboard
-- `drafts`
-    Stores any KLE or intermediate information used in making the case
-- `firmware`
-    Used to store any firmware relating to the keyboard. You should be able to find source files in my QMK fork
-- `outlines`
-    Outlines used to create the case and pcb
-- `pcb`
-    Kicad project relating to the project
-   
-## BOM
-- 1 Assembled PCB (PCB BOM file can be found in `pcb` folder, minus the kailh hotswap sockets)
-- 1 Aluminum CNC case or 3DP case (note that the 3DP threads can wear out, though I haven't has a problem with them yet)
-- 6 4mm M2 screws (go for flathead for a flush fit, though other head types should also work)
-- 4 1-3mm bumpons (something like Sj5302 is a good place to start)
-- (optional) lasercut PE sheet for the bottom. Outline files can be in the `outlines` folder
+- **bancouver40** — keyboard design, PCB, case and firmware by **ChrisChrisLoLo (sporewoh)**:
+  <https://github.com/ChrisChrisLoLo/bancouver40>, GPL-3.0. This project is a fork of it and everything in
+  `pcb/bancouver40_pb2` starts from that board. The original README is kept as [README-bancouver40.md](README-bancouver40.md).
+- **PocketBeagle 2** — hardware and 3D model by **BeagleBoard.org**. The STEP model
+  (`case/pocketbeagle2/models/pocketbeagle2_v03_21_EVT.stp`, from <https://openbeagle.org/pocketbeagle/pocketbeagle-2>)
+  is © BeagleBoard.org Foundation, [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); its web conversion is shared under the same licence.
+  Pin functions come from the [PocketBeagle 2 documentation](https://docs.beagleboard.org/boards/pocketbeagle-2/).
+- **KiCad** and the **KiCad libraries** — footprints and 3D component models (CC BY-SA 4.0 with the KiCad library exception), <https://www.kicad.org/>.
+- **SolidCraft** (tangency-labs) — the case was modelled through SolidCraft's MCP server, <https://solidcraft.io/>.
+- **Freerouting** — autorouting of the display bus, <https://github.com/freerouting/freerouting> (not bundled).
+- **three.js** (MIT) for the 3D page; **JetBrains Mono** and **Space Grotesk** (SIL OFL) via Google Fonts.
+- **QMK** / **Vial** — keyboard firmware (GPL), as shipped by the upstream repo.
+- Reference documents (linked, not redistributed): Maxen MX-046HS40FS-N01 / BuyDisplay ER-TFT4.58-1 panel drawing,
+  Sitronix ST7701S and TI TPS61165 datasheets, Amphenol F32Q/F32R drawings.
+- Design work assisted by Claude Code (Anthropic).
 
-Additionally, you should need
-- 40 (plus spare) kailh choc switches. Avoid Red/White/Brown switches as they can be pretty rattly. Pro Red/Silver/Sunset switches are good places to start.
-- 40 (plus spare) 1u CFX keycaps
+## License
 
-<image src="https://github.com/ChrisChrisLoLo/bancouver40/blob/main/images/PXL_20221205_012230895-01.jpeg" width="500"/>
-
-## Assembly
-- All PCB components are SMD, and many of them are fairly small; PCBA services like PCBWay is highly recommended. BOM and centroid files in source files 
-- Fairly straightforward with an assembled PCB; screw the PCB to the case using the M2 Screws. Add bumpons to case.
-
-## Firmware
-You can find a pre-compiled firmware file in the firmware folder of this repository. If you wish to customize the layout yourself, you can find the source code of the firmware here: https://github.com/ChrisChrisLoLo/qmk_firmware/blob/bancouver40/keyboards/sporewoh/bancouver40/readme.md.
-
-## Acknowledgements
-Big thank you to [PCBWay](https://www.pcbway.com/) for sponsoring this by manufacturing the red aluminum case for me! The anodization coloring is stunning, and I'm impressed by the CNC case quality as a whole. PCBWay offers very reasonable prices for even singluar one-off case manufactures, so I recommend them if you want to look into ordering an aluminum case for yourself or for cnc prototyping as a whole! Case files, as well as a detailed design drawing (required for screw tappings) can be found in the case folder.
-
-Also a big thank you to [Chosfox](https://chosfox.com/) for providing their [Chocfox CFX keycaps](https://chosfox.com/collections/low-profile-keycaps/products/chocfox-cfx-choc-keycaps) as well as choc switches and hotswap sockets! I'm really excited that there's more offerings in the choc keycap space, and I'm a big fan of their square, spherical indented shape. They're very aethetically pleasing (i.e. very small and cute) and comfortable to type on. Chosfox is also continuing to invest in this line of products (1.25u+ keycaps, legends), so I highly recommend trying them out for any choc related keyboard you may have, bancouver40 or not!
+GPL-3.0, inherited from bancouver40 (see [LICENSE](LICENSE)). The PocketBeagle 2 model and its derivatives are
+CC BY-SA 4.0 (see [case/pocketbeagle2/models/README.md](case/pocketbeagle2/models/README.md)).

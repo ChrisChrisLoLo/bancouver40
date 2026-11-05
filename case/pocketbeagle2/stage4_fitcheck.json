@@ -1,0 +1,161 @@
+{
+"commands": [
+{
+"command": "solid.box",
+"params": {
+"length": 170,
+"width": 116,
+"height": 1.6,
+"corner": [
+2.6,
+2.6,
+4.5
+],
+"operation": "new",
+"body_name": "REF_PCB",
+"name": "RefPCB"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 118.8,
+"width": 41.57,
+"height": 2.5,
+"corner": [
+28.2,
+75.415,
+18.6
+],
+"operation": "new",
+"body_name": "REF_LCD_Panel",
+"name": "RefPanel"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 6.75,
+"width": 28.35,
+"height": 2.0,
+"corner": [
+134.755,
+80.005,
+6.1
+],
+"operation": "new",
+"body_name": "REF_J3_FPC_Conn",
+"name": "RefJ3"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 14.495,
+"width": 20.5,
+"height": 0.3,
+"corner": [
+138.505,
+83.925,
+7.4
+],
+"operation": "new",
+"body_name": "REF_FPC_Lower",
+"name": "RefFpcLow"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 0.3,
+"width": 20.5,
+"height": 12.2,
+"corner": [
+153.0,
+83.925,
+7.4
+],
+"operation": "new",
+"body_name": "REF_FPC_Fold",
+"name": "RefFpcFold"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 46.2,
+"width": 5.0,
+"height": 8.5,
+"corner": [
+7.525,
+77.575,
+6.1
+],
+"operation": "new",
+"body_name": "REF_PB2_Socket1",
+"name": "RefSock1"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 46.2,
+"width": 5.0,
+"height": 8.5,
+"corner": [
+7.525,
+102.975,
+6.1
+],
+"operation": "new",
+"body_name": "REF_PB2_Socket2",
+"name": "RefSock2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.0,
+"height": 15,
+"base": [
+16.225,
+114.975,
+6.1
+],
+"operation": "new",
+"body_name": "REF_Standoff1",
+"name": "RefSO1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.0,
+"height": 15,
+"base": [
+164.225,
+114.975,
+6.1
+],
+"operation": "new",
+"body_name": "REF_Standoff2",
+"name": "RefSO2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.0,
+"height": 15,
+"base": [
+164.225,
+76.475,
+6.1
+],
+"operation": "new",
+"body_name": "REF_Standoff3",
+"name": "RefSO3"
+}
+}
+]
+}

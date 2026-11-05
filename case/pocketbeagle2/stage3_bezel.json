@@ -1,0 +1,267 @@
+{
+"commands": [
+{
+"command": "parameters.add",
+"params": {
+"name": "bezel_t",
+"expression": "1.5 mm"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": "L",
+"width": "W - ext_y",
+"height": "bezel_t",
+"corner": [
+0,
+"ext_y",
+"z_deck"
+],
+"operation": "new",
+"body_name": "Bezel",
+"name": "BezelPlate"
+}
+},
+{
+"command": "solid.fillet",
+"params": {
+"edges": [
+[
+0,
+121.2,
+21.85
+],
+[
+175.2,
+121.2,
+21.85
+]
+],
+"radius": 3,
+"name": "BezelCorners"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 121.8,
+"width": 44.57,
+"height": 2.5,
+"corner": [
+26.7,
+73.915,
+18.6
+],
+"operation": "join",
+"targets": [
+"Bezel"
+],
+"name": "PanelFrame"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 119.4,
+"width": 42.17,
+"height": 2.51,
+"corner": [
+27.9,
+75.115,
+18.59
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "PanelPocket"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 3.2,
+"width": 24.0,
+"height": 2.51,
+"corner": [
+146.3,
+82.175,
+18.59
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "FpcExit"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 111.1,
+"width": 37.37,
+"height": 4,
+"center": [
+85.65,
+96.2,
+21.85
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "LcdWindow"
+}
+},
+{
+"command": "solid.chamfer",
+"params": {
+"edges": [
+[
+85.65,
+114.885,
+22.6
+],
+[
+85.65,
+77.515,
+22.6
+],
+[
+30.1,
+96.2,
+22.6
+],
+[
+141.2,
+96.2,
+22.6
+]
+],
+"distance": 0.8,
+"name": "WindowChamfer"
+}
+},
+{
+"command": "solid.box",
+"params": {
+"length": 170.6,
+"width": 1.6,
+"height": 14.3,
+"corner": [
+2.3,
+"ext_y",
+6.8
+],
+"operation": "join",
+"targets": [
+"Bezel"
+],
+"name": "Skirt"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.1,
+"height": 4,
+"base": [
+16.225,
+114.975,
+20.1
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "BezelHole1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.1,
+"height": 2,
+"base": [
+16.225,
+114.975,
+21.6
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "BezelCbore1"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.1,
+"height": 4,
+"base": [
+164.225,
+114.975,
+20.1
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "BezelHole2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.1,
+"height": 2,
+"base": [
+164.225,
+114.975,
+21.6
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "BezelCbore2"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 1.1,
+"height": 4,
+"base": [
+164.225,
+76.475,
+20.1
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "BezelHole3"
+}
+},
+{
+"command": "solid.cylinder",
+"params": {
+"radius": 2.1,
+"height": 2,
+"base": [
+164.225,
+76.475,
+21.6
+],
+"operation": "cut",
+"targets": [
+"Bezel"
+],
+"name": "BezelCbore3"
+}
+}
+]
+}

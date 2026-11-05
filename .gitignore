@@ -133,3 +133,10 @@ dmypy.json
 .pyre/
 
 */.DS_Store
+
+# Zine Machine v0 working files
+case/pocketbeagle2/*.bak
+case/pocketbeagle2/.~*
+pcb/bancouver40_pb2/*.kicad_prl
+pcb/bancouver40_pb2/*-drc.json
+pcb/bancouver40_pb2/*-backups/
