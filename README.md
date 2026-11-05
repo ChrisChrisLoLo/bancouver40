@@ -9,7 +9,7 @@ and a 4.58″ 320×960 bar display, in a translucent printed case.
 
 **Interactive 3D page:** <https://elevenarms.github.io/zinemachine0/>
 
-![Zine Machine v0](site/screenshots/hero_scale.png)
+![Zine Machine v0](site/screenshots/hero.png)
 
 ## What it is
 
