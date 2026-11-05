@@ -140,3 +140,6 @@ case/pocketbeagle2/.~*
 pcb/bancouver40_pb2/*.kicad_prl
 pcb/bancouver40_pb2/*-drc.json
 pcb/bancouver40_pb2/*-backups/
+
+# Zine Machine v0: the interactive page lives in site/ (the Python template above ignores /site)
+!/site

@@ -1,0 +1,110 @@
+:root {
+  --accent: #39ff14;
+  --bg: #05070a;
+  --ink: #e8f0ea;
+  --dim: #8a968e;
+  --glass: rgba(14, 18, 22, 0.62);
+  --line: rgba(255, 255, 255, 0.08);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Space Grotesk", system-ui, sans-serif; }
+a { color: var(--accent); }
+
+.wip { position: fixed; inset: 0 0 auto 0; z-index: 30; text-align: center; padding: 7px 12px;
+  font: 700 12px "JetBrains Mono", monospace; letter-spacing: .06em; color: #061006; background: var(--accent);
+  box-shadow: 0 0 18px var(--accent); }
+.topbar {
+  position: fixed; inset: 30px 0 auto 0; z-index: 20; display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 24px; background: linear-gradient(#05070aee, #05070a00); pointer-events: none;
+}
+.topbar * { pointer-events: auto; }
+.brand { font: 800 18px "JetBrains Mono", monospace; letter-spacing: .02em; display: flex; align-items: center; gap: 8px; }
+.brand .dim { color: var(--dim); }
+.brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent), 0 0 24px var(--accent); }
+nav a { color: var(--ink); text-decoration: none; margin-left: 22px; font-size: 14px; opacity: .8; }
+nav a:hover { color: var(--accent); opacity: 1; }
+
+.stage { position: relative; height: 100vh; min-height: 620px; overflow: hidden;
+  background: radial-gradient(1200px 700px at 60% 55%, color-mix(in srgb, var(--accent) 9%, #0b1014) 0%, #05070a 70%); }
+#viewport, #viewport canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.hero-copy { position: absolute; left: 32px; bottom: 36px; max-width: 460px; z-index: 5; pointer-events: none; }
+.hero-copy h1 { font-size: clamp(30px, 4vw, 54px); line-height: 1.02; margin: 0 0 12px; letter-spacing: -.02em;
+  text-shadow: 0 0 30px color-mix(in srgb, var(--accent) 45%, transparent); }
+.hero-copy p { color: var(--dim); line-height: 1.5; margin: 0; }
+.hero-copy b { color: var(--accent); }
+
+.panel { position: absolute; right: 20px; top: 76px; width: 250px; z-index: 6; padding: 16px; border-radius: 14px;
+  background: var(--glass); backdrop-filter: blur(12px); border: 1px solid var(--line);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent), 0 20px 60px #0008; }
+.panel h3 { margin: 4px 0 10px; font: 600 11px "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .14em; color: var(--dim); }
+.swatches { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 14px; }
+.swatches button { aspect-ratio: 1; border-radius: 50%; border: 2px solid transparent; cursor: pointer; padding: 0;
+  background: var(--c); box-shadow: 0 0 10px var(--c), inset 0 0 8px #fff6; opacity: .85; transition: transform .15s; }
+.swatches button:hover { transform: scale(1.12); opacity: 1; }
+.swatches button.on { border-color: #fff; opacity: 1; }
+.slider { display: block; font-size: 12px; color: var(--dim); margin: 0 0 10px; }
+.slider input { width: 100%; accent-color: var(--accent); }
+.toggles, .views { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+.views { grid-template-columns: repeat(4, 1fr); }
+.toggles button, .views button { font: 600 11px "JetBrains Mono", monospace; padding: 8px 6px; border-radius: 8px; cursor: pointer;
+  color: var(--ink); background: #ffffff0a; border: 1px solid var(--line); transition: all .15s; }
+.toggles button.on { color: #061006; background: var(--accent); border-color: var(--accent); box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 60%, transparent); }
+.views button:hover, .toggles button:hover { border-color: var(--accent); }
+
+.loader { position: absolute; inset: 0; display: grid; place-content: center; gap: 10px; z-index: 8; text-align: center;
+  font: 12px "JetBrains Mono", monospace; color: var(--dim); background: #05070acc; transition: opacity .6s; }
+.loader .bar { width: 240px; height: 3px; background: #ffffff14; border-radius: 3px; overflow: hidden; }
+.loader i { display: block; height: 100%; width: 0; background: var(--accent); box-shadow: 0 0 10px var(--accent); transition: width .2s; }
+.loader.done { opacity: 0; pointer-events: none; }
+
+.hotspot { pointer-events: auto; cursor: pointer; display: flex; align-items: center; gap: 6px; transform: translateY(-50%);
+  font: 600 11px "JetBrains Mono", monospace; color: var(--ink); white-space: nowrap; }
+.hotspot i { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 10px var(--accent);
+  animation: pulse 2s infinite; }
+.hotspot span { padding: 3px 7px; border-radius: 6px; background: #05070acc; border: 1px solid color-mix(in srgb, var(--accent) 45%, transparent); }
+@keyframes pulse { 50% { box-shadow: 0 0 2px var(--accent), 0 0 18px var(--accent); transform: scale(1.25); } }
+
+.info { position: absolute; left: 32px; top: 90px; width: 330px; z-index: 6; padding: 14px 16px; border-radius: 12px;
+  background: var(--glass); backdrop-filter: blur(12px); border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  opacity: 0; transform: translateY(-6px); transition: all .25s; pointer-events: none; }
+.info.show { opacity: 1; transform: none; }
+.info h4 { margin: 0 0 6px; color: var(--accent); font: 700 14px "JetBrains Mono", monospace; }
+.info p { margin: 0; font-size: 13px; line-height: 1.5; color: var(--ink); }
+
+main section { scroll-margin-top: 80px; }
+main { max-width: 1100px; margin: 0 auto; padding: 80px 24px 40px; }
+main h2 { font-size: 28px; margin: 0 0 14px; letter-spacing: -.01em; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 70px; }
+.grid3 article { padding: 22px; border-radius: 14px; background: #0c1116; border: 1px solid var(--line); }
+.grid3 h2 { font-size: 22px; }
+.grid3 p { color: var(--dim); line-height: 1.55; margin: 0; font-size: 14px; }
+.tag { font: 600 10px "JetBrains Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); }
+.specs table { width: 100%; border-collapse: collapse; margin-bottom: 70px; }
+.specs th, .specs td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.specs th { width: 160px; color: var(--accent); font: 600 12px "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.stack { margin-bottom: 70px; }
+.layers { display: flex; flex-direction: column; gap: 4px; max-width: 640px; }
+.layers div { display: flex; justify-content: space-between; align-items: center; padding: 0 14px; border-radius: 6px;
+  height: calc(var(--h) * 9px + 18px); background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 22%, #0c1116), #0c1116);
+  border-left: 3px solid var(--accent); font-size: 13px; }
+.layers span { color: var(--dim); font: 12px "JetBrains Mono", monospace; }
+.note { color: var(--dim); font-size: 13px; }
+.files ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.files a { display: block; padding: 14px; border-radius: 10px; background: #0c1116; border: 1px solid var(--line); text-decoration: none; }
+.files a:hover { border-color: var(--accent); box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 25%, transparent); }
+footer { margin-top: 60px; color: var(--dim); font-size: 12px; text-align: center; }
+@media (max-width: 820px) {
+  .panel { top: auto; bottom: 12px; right: 12px; left: 12px; width: auto; }
+  .hero-copy { display: none; }
+  .grid3 { grid-template-columns: 1fr; }
+}
+
+.bom { margin-bottom: 70px; }
+.bomwrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+.bomt { width: 100%; border-collapse: collapse; font-size: 13px; }
+.bomt th { position: sticky; top: 0; background: #0c1116; text-align: left; padding: 10px; color: var(--accent);
+  font: 600 11px "JetBrains Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.bomt td { padding: 8px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+.bomt td:first-child { font: 12px "JetBrains Mono", monospace; color: var(--dim); white-space: nowrap; }
+.bomt td:nth-child(5) a { white-space: nowrap; }

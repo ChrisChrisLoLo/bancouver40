@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zine Machine v0 — a 40% keyboard with a Linux computer inside</title>
+  <meta name="description" content="Zine Machine v0 (work in progress): a bancouver40-based 4x10 CFX low-profile keyboard with an AM6254 Linux SBC and a 4.58-inch 320x960 bar display, in a translucent neon case." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="wip">WIP — stay tuned — not at all ready for fab :p</div>
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span>Zine Machine<span class="dim">·</span>v0</div>
+    <nav>
+      <a href="#inside">Inside</a>
+      <a href="#specs">Specs</a>
+      <a href="#stack">Stack-up</a>
+      <a href="#bom">BOM</a>
+      <a href="#files">Files</a>
+    </nav>
+  </header>
+
+  <section class="stage" id="stage">
+    <div id="viewport"></div>
+    <div class="loader" id="loader"><div class="bar"><i id="loadbar"></i></div><span id="loadtext">loading models…</span></div>
+
+    <div class="hero-copy">
+      <h1>A 40% keyboard<br/>with a computer inside.</h1>
+      <p>4×10 CFX low-profile keys, a PocketBeagle&nbsp;2 running Linux, and a 4.58″ 320×960 bar display — in a translucent neon shell. Drag to orbit. <b>Type</b> — the keys are live.</p>
+    </div>
+
+    <aside class="panel" id="panel">
+      <h3>Case colour</h3>
+      <div class="swatches" id="swatches"></div>
+      <label class="slider">Translucency <input type="range" id="opacity" min="0.15" max="0.95" step="0.01" value="0.55" /></label>
+      <label class="slider">Glow <input type="range" id="glow" min="0" max="2.5" step="0.01" value="1.0" /></label>
+      <h3>View</h3>
+      <div class="toggles">
+        <button data-toggle="explode">Explode</button>
+        <button data-toggle="bezel" class="on">Bezel</button>
+        <button data-toggle="caps" class="on">Keycaps</button>
+        <button data-toggle="case" class="on">Case</button>
+        <button data-toggle="labels">Labels</button>
+        <button data-toggle="scale" class="on">Deck + pen</button>
+        <button data-toggle="spin">Auto-rotate</button>
+      </div>
+      <div class="views">
+        <button data-view="hero">Hero</button>
+        <button data-view="top">Top</button>
+        <button data-view="side">Side</button>
+        <button data-view="back">Ports</button>
+      </div>
+    </aside>
+
+    <div class="info" id="info"><h4></h4><p></p></div>
+  </section>
+
+  <main>
+    <section id="inside" class="grid3">
+      <article>
+        <span class="tag">SBC</span>
+        <h2>PocketBeagle 2</h2>
+        <p>TI AM6254 quad-core Cortex-A53, 512 MB LPDDR4, on its own 2×18 sockets. It is the USB host for the keyboard and drives the display over 16-bit parallel RGB (DPI) — the official BeagleBoard 3D model is shown here.</p>
+      </article>
+      <article>
+        <span class="tag">Display</span>
+        <h2>4.58″ 320×960 bar</h2>
+        <p>ST7701S IPS bar panel glued under the bezel. RGB565 on VOUT0, 3-wire SPI for init, and a TPS61165 boost driving the 12 V backlight at 39 mA with PWM dimming. Its flex folds 180° under the panel into a 40-pin FPC socket.</p>
+      </article>
+      <article>
+        <span class="tag">Keyboard</span>
+        <h2>bancouver40</h2>
+        <p>The original ChrisChrisLoLo 4×10 CFX-spaced board: ATmega32U4, Kailh Choc hot-swap, QMK/Vial. Its USB-C is gone — the MCU now plugs straight into the PocketBeagle's second USB port, so the stock firmware just works.</p>
+      </article>
+    </section>
+
+    <section id="specs" class="specs">
+      <h2>Specs</h2>
+      <table>
+        <tr><th>Enclosure</th><td>175.2 × 121.2 mm, keyboard deck 12.5 mm, display deck 22.6 mm (bezel top)</td></tr>
+        <tr><th>PCB</th><td>170 × 116 mm, 2-layer, KiCad 10 — USB-C removed, PB2 + FPC + backlight boost added</td></tr>
+        <tr><th>Computer</th><td>PocketBeagle 2 · AM6254 · 512 MB · microSD · USB-C power</td></tr>
+        <tr><th>Display</th><td>4.58″ IPS 320×960 · ST7701S · 18-bit RGB (driven RGB565) · 300 cd/m²</td></tr>
+        <tr><th>Keys</th><td>40 × Kailh Choc v1 · CFX 16.5 mm low-profile caps · 17 mm pitch</td></tr>
+        <tr><th>Fasteners</th><td>6 × M2 (keyboard) · 3 × M2×15 F-F standoffs clamp PCB, case and bezel</td></tr>
+      </table>
+    </section>
+
+    <section id="stack" class="stack">
+      <h2>Stack-up</h2>
+      <div class="layers">
+        <div style="--z:22.6;--h:1.5"><b>Bezel</b><span>21.1 – 22.6</span></div>
+        <div style="--z:21.1;--h:2.5"><b>4.58″ panel</b><span>18.6 – 21.1</span></div>
+        <div style="--z:18.0;--h:3.4"><b>PocketBeagle 2</b><span>14.6 – 18.0</span></div>
+        <div style="--z:14.6;--h:8.5"><b>PB2 sockets</b><span>6.1 – 14.6</span></div>
+        <div style="--z:6.1;--h:1.6"><b>Keyboard PCB</b><span>4.5 – 6.1</span></div>
+        <div style="--z:1;--h:1"><b>Floor</b><span>0 – 1</span></div>
+      </div>
+      <p class="note">Heights in mm from the bottom of the case, checked against the official PocketBeagle 2 STEP in SolidCraft (its tallest part under the panel is 17.2 mm).</p>
+    </section>
+
+    <section id="bom" class="bom">
+      <h2>Bill of materials</h2>
+      <p class="note">Order links and prices checked 5 Nov 2026 (LCSC, DigiKey, Mouser, vendor stores) — re-check before ordering. PCB parts carry LCSC numbers for JLCPCB assembly; CSVs are in <a href="https://github.com/elevenarms/zinemachine0/tree/main/bom">bom/</a>.</p>
+      <div class="bomwrap">
+<!--BOM-->
+<table class="bomt"><thead><tr><th>Refs / group</th><th>Qty</th><th>Part</th><th>MPN</th><th>Order</th><th>Price</th></tr></thead><tbody>
+<tr><td>U1</td><td>1</td><td>ATmega32U4 QFN-44 7x7</td><td>Microchip ATMEGA32U4-MU</td><td><a href="https://www.lcsc.com/product-detail/C112161.html" target="_blank" rel="noopener">C112161</a></td><td></td></tr>
+<tr><td>Y1</td><td>1</td><td>16 MHz 3225-4P</td><td>YXC X322516MLB4SI</td><td><a href="https://www.lcsc.com/product-detail/C13738.html" target="_blank" rel="noopener">C13738</a></td><td></td></tr>
+<tr><td>C1,C2</td><td>2</td><td>22 pF 0402</td><td>Yageo CC0402JRNPO9BN220</td><td><a href="https://www.lcsc.com/product-detail/C106203.html" target="_blank" rel="noopener">C106203</a></td><td></td></tr>
+<tr><td>C3</td><td>1</td><td>1 µF 0402</td><td>Samsung CL05A105KP5NNNC</td><td><a href="https://www.lcsc.com/product-detail/C14445.html" target="_blank" rel="noopener">C14445</a></td><td></td></tr>
+<tr><td>C4,C5,C6</td><td>3</td><td>100 nF 0402</td><td>Yageo CC0402KRX5R6BB104</td><td><a href="https://www.lcsc.com/product-detail/C129131.html" target="_blank" rel="noopener">C129131</a></td><td></td></tr>
+<tr><td>C7</td><td>1</td><td>10 µF 0402</td><td>Samsung CL05A106MQ5NUNC</td><td><a href="https://www.lcsc.com/product-detail/C15525.html" target="_blank" rel="noopener">C15525</a></td><td></td></tr>
+<tr><td>R1,R6</td><td>2</td><td>10 k 0402</td><td>Yageo AC0402FR-0710KL</td><td><a href="https://www.lcsc.com/product-detail/C144807.html" target="_blank" rel="noopener">C144807</a></td><td></td></tr>
+<tr><td>R4,R5</td><td>2</td><td>22 Ω 0402</td><td>Yageo RC0402FR-0722RL</td><td><a href="https://www.lcsc.com/product-detail/C114765.html" target="_blank" rel="noopener">C114765</a></td><td></td></tr>
+<tr><td>F1</td><td>1</td><td>500 mA PTC 1206</td><td>Littelfuse 1206L050YR</td><td><a href="https://www.lcsc.com/product-detail/C163512.html" target="_blank" rel="noopener">C163512</a></td><td></td></tr>
+<tr><td>B1</td><td>1</td><td>Reset switch SKQG</td><td>ALPS SKQGAKE010</td><td><a href="https://www.lcsc.com/product-detail/C127478.html" target="_blank" rel="noopener">C127478</a></td><td></td></tr>
+<tr><td>D1–D40</td><td>40</td><td>1N4148WS SOD-323</td><td>MDD 1N4148WS</td><td><a href="https://www.lcsc.com/product-detail/C437156.html" target="_blank" rel="noopener">C437156</a></td><td></td></tr>
+<tr><td>U3</td><td>1</td><td>TPS61165 SOT-23-6</td><td>TI TPS61165DBVR</td><td><a href="https://www.lcsc.com/product-detail/C58756.html" target="_blank" rel="noopener">C58756</a> · <a href="https://www.digikey.com/en/products/detail/texas-instruments/TPS61165DBVR/2340764" target="_blank" rel="noopener">alt</a></td><td>$0.76</td></tr>
+<tr><td>L1</td><td>1</td><td>22 µH 4x4 (SRN4018 pads)</td><td>Taiyo Yuden NRS4018T220MDGJ</td><td><a href="https://www.lcsc.com/product-detail/C304460.html" target="_blank" rel="noopener">C304460</a> · <a href="https://www.digikey.com/en/products/detail/bourns-inc/SRN4018-220M/3821626" target="_blank" rel="noopener">alt</a></td><td>$0.15</td></tr>
+<tr><td>D41</td><td>1</td><td>MBR0540 SOD-123</td><td>onsemi MBR0540T1G</td><td><a href="https://www.lcsc.com/product-detail/C21353.html" target="_blank" rel="noopener">C21353</a> · <a href="https://www.digikey.com/en/products/detail/onsemi/MBR0540T1G/918576" target="_blank" rel="noopener">alt</a></td><td>$0.058</td></tr>
+<tr><td>C8</td><td>1</td><td>4.7 µF 25 V X5R 0805</td><td>Samsung CL21A475KAQNNNE</td><td><a href="https://www.lcsc.com/product-detail/C1779.html" target="_blank" rel="noopener">C1779</a></td><td>$0.035</td></tr>
+<tr><td>C9</td><td>1</td><td>1 µF 50 V X7R 0805</td><td>Samsung CL21B105KBFNNNE</td><td><a href="https://www.lcsc.com/product-detail/C28323.html" target="_blank" rel="noopener">C28323</a></td><td>$0.042</td></tr>
+<tr><td>C10</td><td>1</td><td>220 nF 25 V X7R 0603</td><td>Samsung CL10B224KA8NNNC</td><td><a href="https://www.lcsc.com/product-detail/C21120.html" target="_blank" rel="noopener">C21120</a></td><td>$0.009</td></tr>
+<tr><td>R7</td><td>1</td><td>5.1 Ω 1% 0603</td><td>UNI-ROYAL 0603WAF510KT5E</td><td><a href="https://www.lcsc.com/product-detail/C25197.html" target="_blank" rel="noopener">C25197</a></td><td>$0.0036</td></tr>
+<tr><td>R8</td><td>1</td><td>100 k 1% 0603</td><td>UNI-ROYAL 0603WAF1003T5E</td><td><a href="https://www.lcsc.com/product-detail/C25803.html" target="_blank" rel="noopener">C25803</a></td><td>$0.003</td></tr>
+<tr><td>J3</td><td>1</td><td>40p 0.5 mm FPC, top contact F32Q</td><td>Amphenol F32Q-1A7H1-11040</td><td><a href="https://www.lcsc.com/product-detail/C3168061.html" target="_blank" rel="noopener">C3168061</a> · <a href="https://www.digikey.com/en/products/detail/amphenol-cs-fci/F32Q-1A7H1-11040/11564739" target="_blank" rel="noopener">alt</a></td><td>$0.99</td></tr>
+<tr><td>Compute</td><td>1</td><td>PocketBeagle 2 (AM6254, ships as Rev A1)</td><td>BeagleBoard 102110780</td><td><a href="https://www.digikey.com/en/products/detail/beagleboard-by-seeed-studio/102110780/25927193" target="_blank" rel="noopener">order</a> · <a href="https://www.mouser.com/ProductDetail/BeagleBoard-by-Seeed-Studio/102110780?qs=%252BXxaIXUDbq3pDS5bF5qfpw%3D%3D" target="_blank" rel="noopener">alt</a></td><td>$39.53 (DigiKey)</td></tr>
+<tr><td>Compute</td><td>2</td><td>2x18 male header 2.54 mm, straight THT (PB2 plugs onto these)</td><td>HC-PZ254-11.5L-2x18PZ · LCSC C41376109</td><td><a href="https://www.lcsc.com/product-detail/C41376109.html" target="_blank" rel="noopener">order</a> · <a href="https://www.lcsc.com/product-detail/C2894979.html" target="_blank" rel="noopener">alt</a></td><td>$0.20</td></tr>
+<tr><td>Display</td><td>1</td><td>4.58&quot; 320x960 IPS bar TFT, ST7701S, 40p FPC — choose &quot;No Touch Panel&quot;</td><td>BuyDisplay ER-TFT4.58-1</td><td><a href="https://www.buydisplay.com/bar-type-4-58-inch-320x960-ips-tft-lcd-display-spi-rgb-interface" target="_blank" rel="noopener">order</a> · <a href="https://www.adafruit.com/product/5805" target="_blank" rel="noopener">alt</a></td><td>$14.33 (BuyDisplay)</td></tr>
+<tr><td>Keyboard</td><td>40</td><td>Kailh Choc v1 low-profile switches (PG1350)</td><td>Kailh CPG1350</td><td><a href="https://splitkb.com/products/kailh-low-profile-choc-switches" target="_blank" rel="noopener">order</a> · <a href="https://www.chosfox.com/products/kailh-chocs" target="_blank" rel="noopener">alt</a></td><td>~$5 / 10</td></tr>
+<tr><td>Keyboard</td><td>40</td><td>Kailh Choc hot-swap sockets (hand-solder)</td><td>Kailh CPG135001S30</td><td><a href="https://splitkb.com/products/kailh-hotswap-sockets" target="_blank" rel="noopener">order</a> · <a href="https://www.chosfox.com/products/kailh-choc-switch-1350-hot-swap-sockets" target="_blank" rel="noopener">alt</a></td><td>$6.57 / 50</td></tr>
+<tr><td>Keyboard</td><td>40</td><td>Chosfox CFX keycaps 16.5 x 16.5 mm (not &quot;CFX Puls&quot;), 1U x10 packs</td><td>Chocfox CFX 1U</td><td><a href="https://www.chosfox.com/products/chocfox-cfx-choc-keycaps" target="_blank" rel="noopener">order</a> · <a href="https://www.chosfox.com/collections/cfx-keycaps" target="_blank" rel="noopener">alt</a></td><td>$3.50 / 10</td></tr>
+<tr><td>Hardware</td><td>3</td><td>M2 x 15 mm F-F brass hex standoff</td><td>Würth 970150244</td><td><a href="https://uk.farnell.com/wurth-elektronik/970150244/standoff-brass-hex-f-f-m2-15mm/dp/3757947" target="_blank" rel="noopener">order</a> · <a href="https://www.mouser.com/c/?q=970150244" target="_blank" rel="noopener">alt</a></td><td>stock unverified — an M2 standoff kit works</td></tr>
+<tr><td>Hardware</td><td>6</td><td>M2 x 4 flat-head screws (PCB to keyboard bosses)</td><td>Essentra 50M020040H004</td><td><a href="https://www.mouser.com/c/?q=50M020040H004" target="_blank" rel="noopener">order</a></td><td>$0.15</td></tr>
+<tr><td>Hardware</td><td>6</td><td>M2 x 4-5 button/pan-head screws (standoffs: 3 below, 3 through bezel)</td><td>any M2 x 4-5</td><td></td><td>not verified — use an M2 kit</td></tr>
+<tr><td>Hardware</td><td>4</td><td>Rubber bumpons 7.9 mm</td><td>3M SJ5302</td><td><a href="https://www.digikey.com/en/products/detail/3m/SJ5302/2345107" target="_blank" rel="noopener">order</a> · <a href="https://www.mouser.com/c/?q=SJ5302" target="_blank" rel="noopener">alt</a></td><td>DigiKey min. 144; Mouser from $0.10</td></tr>
+<tr><td>Hardware</td><td>1</td><td>Thin double-sided tape to glue the panel (optional)</td><td>3M 9495LE ½&quot; x 5 yd</td><td><a href="https://www.digikey.com/en/products/detail/3m-tc/9495LE-0-5-5/2649291" target="_blank" rel="noopener">order</a></td><td>$11.28</td></tr>
+<tr><td>Fabrication</td><td>1</td><td>PCB + assembly (upload fab/ gerbers + bom/jlcpcb_*.csv)</td><td>2-layer, 170 x 116 mm</td><td><a href="https://jlcpcb.com/quote" target="_blank" rel="noopener">order</a> · <a href="https://jlcpcb.com/parts" target="_blank" rel="noopener">alt</a></td><td></td></tr>
+<tr><td>Fabrication</td><td>1</td><td>Case + bezel print (translucent resin)</td><td>case/pocketbeagle2/*.stl</td><td><a href="https://jlc3dp.com/3d-printing-quote" target="_blank" rel="noopener">order</a> · <a href="https://jlc3dp.com/" target="_blank" rel="noopener">alt</a></td><td></td></tr>
+</tbody></table>
+<!--/BOM-->
+      </div>
+    </section>
+
+    <section id="files" class="files">
+      <h2>Files</h2>
+      <ul>
+        <li><a href="../case/pocketbeagle2/bancouver40_pb2_case.stl">Case — STL</a></li>
+        <li><a href="../case/pocketbeagle2/bancouver40_pb2_bezel.stl">Bezel — STL</a></li>
+        <li><a href="../case/pocketbeagle2/bancouver40_pb2_case.step">Case + bezel — STEP</a></li>
+        <li><a href="../case/pocketbeagle2/bancouver40_pb2.solidcraft">SolidCraft design</a></li>
+        <li><a href="../pcb/bancouver40_pb2/fab/bancouver40_pb2-gerbers.zip">PCB Gerbers</a></li>
+        <li><a href="../pcb/bancouver40_pb2/schematic.pdf">Schematic — PDF</a></li>
+        <li><a href="../case/pocketbeagle2/drawings/bancouver40_pb2_drawings.pdf">Dimensioned drawings — PDF</a></li>
+        <li><a href="../bom/BOM.csv">BOM — CSV</a></li>
+        <li><a href="../bom/jlcpcb_bom.csv">JLCPCB BOM</a> · <a href="../bom/jlcpcb_cpl.csv">CPL</a></li>
+        <li><a href="https://github.com/elevenarms/zinemachine0/blob/main/pcb/bancouver40_pb2/README.md">Design notes</a></li>
+        <li><a href="https://github.com/elevenarms/zinemachine0">Source on GitHub</a></li>
+      </ul>
+    </section>
+    <footer>Zine Machine v0 is built on <a href="https://github.com/ChrisChrisLoLo/bancouver40">bancouver40</a> by ChrisChrisLoLo (GPL-3.0). PocketBeagle 2 3D model © <a href="https://openbeagle.org/pocketbeagle/pocketbeagle-2">BeagleBoard.org</a> (CC BY-SA 4.0). Component models from the <a href="https://www.kicad.org/libraries/">KiCad libraries</a> (CC BY-SA 4.0 with exception). Rendered with <a href="https://threejs.org/">three.js</a>. Designed with KiCad, <a href="https://solidcraft.io/">SolidCraft</a> and Freerouting. <a href="https://github.com/elevenarms/zinemachine0">Source on GitHub</a>.</footer>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
