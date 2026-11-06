@@ -1,0 +1,18 @@
+{
+  "kind": "3dp",
+  "name": "Display chassis",
+  "source": "display_chassis.step",
+  "qty": 1,
+  "options": {
+    "process": "mjf",
+    "material": "pa12",
+    "color": "black"
+  },
+  "features": {
+    "volume_cm3": 12.52,
+    "area_cm2": 188.4,
+    "size_x_mm": 127.3,
+    "size_y_mm": 47.1,
+    "size_z_mm": 15.0
+  }
+}

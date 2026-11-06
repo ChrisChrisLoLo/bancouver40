@@ -143,3 +143,13 @@ pcb/bancouver40_pb2/*-backups/
 
 # Zine Machine v0: the interactive page lives in site/ (the Python template above ignores /site)
 !/site
+
+# Zine Machine: large files that are regenerated or downloaded (see each folder's README / script)
+case/pocketbeagle2/models/industrial/pocketbeagle2_v07.step
+case/pocketbeagle2/models/industrial/pocketbeagle2 revA_241205.brd
+mech/zine_concept*.step
+mech/zine_concept*.glb
+mech/fitcheck_*.step
+mech/fitcheck_*.glb
+*.blend1
+~*.lck

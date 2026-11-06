@@ -1,0 +1,18 @@
+{
+  "kind": "3dp",
+  "name": "Tray",
+  "source": "tray.step",
+  "qty": 1,
+  "options": {
+    "process": "mjf",
+    "material": "pa12",
+    "color": "black"
+  },
+  "features": {
+    "volume_cm3": 36.3,
+    "area_cm2": 605.0,
+    "size_x_mm": 175.2,
+    "size_y_mm": 131.2,
+    "size_z_mm": 12.5
+  }
+}
