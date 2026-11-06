@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name "random-keyboard-parts")(type "Legacy")(uri "${KIPRJMOD}/../libs/random-keyboard-parts.pretty/Schematic Library/random-keyboard-parts.lib")(options "")(descr ""))
+  (version 7)
+  (lib (name "zm_v3")(type "KiCad")(uri "${KIPRJMOD}/zm_v3.kicad_sym")(options "")(descr "Zine Machine v3 custom symbols"))
 )

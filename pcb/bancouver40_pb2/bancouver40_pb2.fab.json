@@ -1,0 +1,8 @@
+{
+  "kind": "pcb",
+  "name": "Zine Machine main board",
+  "source": "bancouver40_pb2.kicad_pcb",
+  "qty": 5,
+  "options": {"layers": 2, "thickness_mm": 1.6},
+  "features": {"width_mm": 170.0, "height_mm": 126.0, "min_drill_mm": 0.3}
+}
